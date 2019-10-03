@@ -7,7 +7,7 @@ public class Quarrel extends Method {
     public static void main(String[] args) {
 
         LinkNode L = new LinkNode();
-        System.out.println("初始化：");
+        //初始化
         initLinkNode(L);
         System.out.println(L.toString());
 
@@ -19,6 +19,9 @@ public class Quarrel extends Method {
         insertLinkNode(L,"E");
         insertLinkNode(L,"F");
         System.out.println(L.toString());
+
+        update(L,2,"b");
+        System.out.println("update-->"+L.toString());
 
         int count = traverse(L);
         System.out.println("节点个数："+count);
