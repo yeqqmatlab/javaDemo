@@ -6,7 +6,7 @@ package com.yqq.link;
 public class Quarrel extends Method {
     public static void main(String[] args) {
 
-        LinkNode L = new LinkNode();
+        /*LinkNode L = new LinkNode();
         //初始化
         initLinkNode(L);
         System.out.println(L.toString());
@@ -40,7 +40,12 @@ public class Quarrel extends Method {
         System.out.println("节点个数："+count);
         str = outputLinkNode(L);
         System.out.println(str);
-        System.out.println(L.toString());
+        System.out.println(L.toString());*/
+
+
+
+
+
 
     }
 }

@@ -5,9 +5,9 @@ package com.yqq.link;
  */
 public class LinkNode {
 
-    public String data;
+    private String data;
 
-    public LinkNode next;
+    private LinkNode next;
 
     public LinkNode(String data,LinkNode next){
         super();
@@ -37,6 +37,6 @@ public class LinkNode {
 
     @Override
     public String toString(){
-        return "data:"+data+" next->"+next;
+        return "{"+data+",next}->"+next;
     }
 }

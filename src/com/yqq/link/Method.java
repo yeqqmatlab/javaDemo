@@ -21,14 +21,14 @@ public class Method {
         //每次都会从链表头开始往下查找
         // 还有一种死循环的写法，用while
         while (true){
-            if(p.next==null){
+            if(p.getNext()==null){
                 q.setData(data);
                 q.setNext(null);
                 p.setNext(q);
                 System.out.println("Insert "+data+" success.");
                 break;
             }else{
-                p = p.next;
+                p = p.getNext();
             }
 
         }
@@ -40,11 +40,11 @@ public class Method {
         LinkNode p = L;
         while (true){
             if(count == n){
-                p.setNext(p.next.next);
+                p.setNext(p.getNext().getNext());
                 break;
             }else{
                 count++;
-                p = p.next;
+                p = p.getNext();
             }
         }
     }
@@ -59,7 +59,7 @@ public class Method {
                 break;
             }else{
                 count++;
-                p = p.next;
+                p = p.getNext();
             }
         }
     }
@@ -69,11 +69,11 @@ public class Method {
         LinkNode p = L;
         int flag = 0;
         for(int i=0;i<traverse(L);i++){
-            if(p.data==str){
+            if(p.getData().equals(str)){
                 //System.out.println(i);
                 flag = i;
             }
-            p = p.next;
+            p = p.getNext();
         }
         return flag;
     }
@@ -82,8 +82,8 @@ public class Method {
     public static int traverse(LinkNode L){
         LinkNode p = L;
         int count = 1;
-        while(p.next!=null){
-            p = p.next;
+        while(p.getNext()!=null){
+            p = p.getNext();
             count++;
         }
         return count;
@@ -94,13 +94,36 @@ public class Method {
         StringBuffer str = new StringBuffer();
         LinkNode p = L;
         while (true){
-            str.append(p.data);
-            if(p.next!=null){
-                p = p.next;
+            str.append(p.getData());
+            if(p.getNext()!=null){
+                p = p.getNext();
             }else{
                 break;
             }
         }
         return str;
     }
+
+    //创建一个长度为5的环形链表
+    public static void getCircleLinked(LinkNode L, String data){
+
+        LinkNode p = L;
+        LinkNode q = new LinkNode();
+        //每次都会从链表头开始往下查找
+        while (true){
+            if(p.getNext()==null){
+
+                q.setData(data);
+                q.setNext(null);
+                p.setNext(q);
+                System.out.println("Insert "+data+" success.");
+                break;
+            }else{
+                p = p.getNext();
+            }
+
+        }
+
+    }
+
 }
