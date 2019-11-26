@@ -18,6 +18,7 @@ public class Quarrel extends Method {
         insertLinkNode(L,"D");
         insertLinkNode(L,"E");
         insertLinkNode(L,"F");
+        //data:# next->data:A next->data:B next->data:C next->data:D next->data:E next->data:F next->null
         System.out.println(L.toString());
 
         update(L,2,"b");
